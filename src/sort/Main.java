@@ -22,7 +22,8 @@ public class Main
             numbers[ii] = (int) (Math.random() * 100.0);
         
         printArray(numbers);
-        Selection.sort(numbers);
+        //Selection.sort(numbers);
+        Insertion.sort(numbers);
         printArray(numbers);
     }
 }
