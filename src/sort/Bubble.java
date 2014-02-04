@@ -1,10 +1,10 @@
 package sort;
 
 /**
- * Selection sort class
+ * Bubble sort class
  * @author John Ying
  */
-public class Selection
+public class Bubble
 {
     /**
      * Sort algorithm
@@ -13,13 +13,10 @@ public class Selection
     public static void sort(Comparable[] a) {
         int N = a.length;
         
-        for (int ii = 0; ii < N; ii++) {
-            int min = ii;
-            
-            for (int jj = ii+1; jj < N; jj++)
-                if (a[jj].compareTo(a[min]) < 0)
-                    swap(a, min, jj);
-        }
+        for (int ii = N-1; ii > 0; ii--)
+            for (int jj = 0; jj < ii; jj++)
+                if (a[jj].compareTo(a[jj+1]) > 0)
+                    swap(a, jj, jj+1);
     }
     
     /**

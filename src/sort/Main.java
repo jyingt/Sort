@@ -6,6 +6,10 @@ package sort;
  */
 public class Main
 {
+    /**
+     * Print contents of array
+     * @param a
+     */
     public static void printArray(Comparable[] a) {
         int N = a.length;
         
@@ -15,15 +19,20 @@ public class Main
         System.out.println();
     }
     
+    /**
+     * Unit test
+     * @param args
+     */
     public static void main(String[] args) {
-        Integer[] numbers = new Integer[10];
+        Integer[] numbers = new Integer[20];
         
         for (int ii = 0; ii < numbers.length; ii++)
             numbers[ii] = (int) (Math.random() * 100.0);
         
         printArray(numbers);
         //Selection.sort(numbers);
-        Insertion.sort(numbers);
+        //Insertion.sort(numbers);
+        Bubble.sort(numbers);
         printArray(numbers);
     }
 }
